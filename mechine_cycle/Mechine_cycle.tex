@@ -1,0 +1,62 @@
+\documentclass[11pt]{article}
+\usepackage{graphicx}
+\begin{document}
+    \title{Machine Cycle in 8085 Microprocessor}
+    \author{NK-codes047}
+    \date{}
+    \maketitle
+    In this article the understanding of Machine cycle in 8085 is illustrated.
+    \newline\\
+    \begin{huge}
+        Machine Cycle Diagram\\
+    \end{huge}
+    A general machine cycle diagram is shown bello:-\\
+    \includegraphics[scale=0.4]{machine-cycle-diagram-1024x687-transformed.jpeg}
+    \textbf{Instruction Cycle : }
+        It is the total time taken by the Microprocessor to complete the execution of an instruction. The 8085 microprocessor contains generally about 1-5 machine cycles.\\
+    \textbf{Machine Cycle : }
+        It is the total time taken by the Microprocessor to complete any operation of accessing either memoryor I/O which is the sub-part of an instructon. The 8085 microprocessor contains generally about 3-6 T-state.\\
+    \textbf{T-state : }
+        It is termed as the subdivisin of an operation, that takes one clock period to complete.\\\\
+    \begin{huge}
+        Power Supply
+    \end{huge}\\
+    A 8085 Microprocessor has the following power supply specification :-\\
+    \textbf{Vcc: }+5 Volt\\
+    \textbf{Vss: }Ground or -ve terminal of power supply\\\\
+    \begin{huge}
+        Clock Frequency
+    \end{huge}\\
+    \textbf{X1,X2: }These are the pair crystal that is connected across the pins of the IC.
+    The frequency is divided by 2 inside the IC. So in order to operate the system at 3 MHz, the crystal must be of frequency 6 MHz.\\
+    \textbf{Clkout or clock output: }this singnal can be used as the system clock for other devices.\\\\
+    \begin{huge}
+        External singnals \\
+    \end{huge}
+    The 8085 has 5 hardeare interrupt singnals , as follows:- \\
+    \textbf{TRAP: } This is a Nonmaskable interrupt has the highest priority.\\
+    then according the priority comes the \textbf{RST 7.5, RST 6.5 and RST 5.5}\\
+    \textbf{Restart Interruots: }These are vectored interrupts that transfer the program control to specific memory locations.\\
+    \textbf{Maskable }interrupts having fixed memory locations i.e. 7.5 x 8 = 003CH, 6.5 x 8 = 0034H, 5.5 x 8 = 002CH \\
+    the memory location for TRAP is 2.4 x 8 = 0024H\\
+    More instructions are as followed:-\\
+    \textbf{1. TNTR: }Interrupt Request - it has the lowest priority among all the interrupt.\\
+    \textbf{2. INTA: }Interrupt Acknowledge - this is used to Acknowledge an interrupt.\\
+    \textbf{3. HOLD: }This singnal indicates that a peripheral such as a DMA controller is requesting the use of the address and data buses.\\
+    \textbf{4. HLDA: }Hold Acknowledge - this is singnal Acknowledge the HOLD request.\\
+    \textbf{5. READY: }This singnal is used to delay the microprocessor Read and Write cycleuntil a slow responding peripheral is ready to send or acet data.\\
+    \textbf{6. REST IN: }When the singnal on this pin goes low, the program controller is set to zero and the microprocessor is reset.\\
+    \textbf{7. REST OUT: }This singnal indicates that the MPU is being rest and also reset other devices.\\
+\\
+\begin{huge}
+    Details of Interrupts \\
+\end{huge}
+\begin{huge}
+
+\end{huge}
+
+
+
+
+
+\end{document}
